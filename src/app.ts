@@ -7,7 +7,9 @@ const app: Application = express();
 
 //parsers
 app.use(express.json());
-app.use(cors({ origin: ['http://localhost:5173'] }));
+app.use(
+  cors({ origin: ['http://localhost:5173', 'https://leafycart-389.web.app'] }),
+);
 
 // application routes
 app.use('/api/v1/products', ProductRoutes);
