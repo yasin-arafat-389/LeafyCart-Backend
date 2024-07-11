@@ -20,6 +20,18 @@ const ExampleSchema = new mongoose.Schema<TProduct>({
     min: 0,
     max: 5,
   },
+  category: {
+    type: String,
+    required: true,
+  },
+  image: {
+    type: String,
+    required: true,
+  },
+  quantity: {
+    type: Number,
+    required: true,
+  },
 });
 
 const ProductModel = mongoose.model<TProduct>('Product', ExampleSchema);
